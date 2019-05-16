@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40D50ED7-EFD3-45C9-9D76-C855F5964189}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ParkingApp.Core</RootNamespace>
+    <AssemblyName>ParkingApp.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\EntityFramework\efRepositoryBase.cs" />
+    <Compile Include="Data\IEntityRepository.cs" />
+    <Compile Include="Entity\IEntity.cs" />
+    <Compile Include="Migrations\201905141053409_addRecipeTable.cs" />
+    <Compile Include="Migrations\201905141053409_addRecipeTable.Designer.cs">
+      <DependentUpon>201905141053409_addRecipeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905141055270_updateRecipeTable.cs" />
+    <Compile Include="Migrations\201905141055270_updateRecipeTable.Designer.cs">
+      <DependentUpon>201905141055270_updateRecipeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905141206310_updateControlTable.cs" />
+    <Compile Include="Migrations\201905141206310_updateControlTable.Designer.cs">
+      <DependentUpon>201905141206310_updateControlTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905141244121_updateSubscriberTable.cs" />
+    <Compile Include="Migrations\201905141244121_updateSubscriberTable.Designer.cs">
+      <DependentUpon>201905141244121_updateSubscriberTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905141250222_addCityDistrictForeignKey.cs" />
+    <Compile Include="Migrations\201905141250222_addCityDistrictForeignKey.Designer.cs">
+      <DependentUpon>201905141250222_addCityDistrictForeignKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905151808352_updateSubscriptionTable.cs" />
+    <Compile Include="Migrations\201905151808352_updateSubscriptionTable.Designer.cs">
+      <DependentUpon>201905151808352_updateSubscriptionTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905151853446_updateForeignKeys.cs" />
+    <Compile Include="Migrations\201905151853446_updateForeignKeys.Designer.cs">
+      <DependentUpon>201905151853446_updateForeignKeys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905151855198_updateForeignKeys1.cs" />
+    <Compile Include="Migrations\201905151855198_updateForeignKeys1.Designer.cs">
+      <DependentUpon>201905151855198_updateForeignKeys1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905151858279_updateForeignKeys3.cs" />
+    <Compile Include="Migrations\201905151858279_updateForeignKeys3.Designer.cs">
+      <DependentUpon>201905151858279_updateForeignKeys3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905151940257_updateSubscription.cs" />
+    <Compile Include="Migrations\201905151940257_updateSubscription.Designer.cs">
+      <DependentUpon>201905151940257_updateSubscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905151946180_updateRecipe.cs" />
+    <Compile Include="Migrations\201905151946180_updateRecipe.Designer.cs">
+      <DependentUpon>201905151946180_updateRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905152237321_updateSubscription1.cs" />
+    <Compile Include="Migrations\201905152237321_updateSubscription1.Designer.cs">
+      <DependentUpon>201905152237321_updateSubscription1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ParkingDbContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905141053409_addRecipeTable.resx">
+      <DependentUpon>201905141053409_addRecipeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905141055270_updateRecipeTable.resx">
+      <DependentUpon>201905141055270_updateRecipeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905141206310_updateControlTable.resx">
+      <DependentUpon>201905141206310_updateControlTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905141244121_updateSubscriberTable.resx">
+      <DependentUpon>201905141244121_updateSubscriberTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905141250222_addCityDistrictForeignKey.resx">
+      <DependentUpon>201905141250222_addCityDistrictForeignKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905151808352_updateSubscriptionTable.resx">
+      <DependentUpon>201905151808352_updateSubscriptionTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905151853446_updateForeignKeys.resx">
+      <DependentUpon>201905151853446_updateForeignKeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905151855198_updateForeignKeys1.resx">
+      <DependentUpon>201905151855198_updateForeignKeys1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905151858279_updateForeignKeys3.resx">
+      <DependentUpon>201905151858279_updateForeignKeys3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905151940257_updateSubscription.resx">
+      <DependentUpon>201905151940257_updateSubscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905151946180_updateRecipe.resx">
+      <DependentUpon>201905151946180_updateRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905152237321_updateSubscription1.resx">
+      <DependentUpon>201905152237321_updateSubscription1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ParkingApp.Data\ParkingApp.Data.csproj">
+      <Project>{3ab5540a-daa9-47f7-b288-798f84be88df}</Project>
+      <Name>ParkingApp.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
